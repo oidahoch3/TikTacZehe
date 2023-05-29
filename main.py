@@ -1,10 +1,11 @@
-lex = 'yes'
+list = ['lex', 'give', 'me', 2, 'kiss', 'pls']
 
-while lex == 'yes':
-    print('give kiss')
-    lex = input('is lex still cute? ')
+for value in list:
+    print(value)
 
+n = 0
 
-password = input('enter password: ')
-if password == 'cute':
-    print('still give kiss')
+while n < len(list):
+    print(list[n])
+    n = n + 1
+
