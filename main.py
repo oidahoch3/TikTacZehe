@@ -1,22 +1,13 @@
-boyfriend = {
-    'name': 'Lex',
-    'grades': [2, 4, 3, 1, 1, 2, 4, 3, 2, 3]
-}
+# Create a function called 'kiss' with two arguments, a 'name' and an 'amount'. done
+# Once called, it should print 'kiss name' n times for the amount that is given.
 
-# Print name and average grade of boyfriend
 
-total = sum(boyfriend['grades'])
-length = len(boyfriend['grades'])
+def kiss(name, amount):
+    n = 0
 
-print(boyfriend['name'], total / length)
+    while n < amount:
+        print('lex kiss', name)
+        n = n + 1
 
-# Okay but now use a loop and not sum/len
 
-total = 0
-length = 0
-
-for value in boyfriend['grades']:
-    total = total + value
-    length = length + 1
-
-print(boyfriend['name'], total / length)
+kiss('anna', 10)
