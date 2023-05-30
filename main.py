@@ -1,11 +1,22 @@
-list = ['lex', 'give', 'me', 2, 'kiss', 'pls']
+boyfriend = {
+    'name': 'Lex',
+    'grades': [2, 4, 3, 1, 1, 2, 4, 3, 2, 3]
+}
 
-for value in list:
-    print(value)
+# Print name and average grade of boyfriend
 
-n = 0
+total = sum(boyfriend['grades'])
+length = len(boyfriend['grades'])
 
-while n < len(list):
-    print(list[n])
-    n = n + 1
+print(boyfriend['name'], total / length)
 
+# Okay but now use a loop and not sum/len
+
+total = 0
+length = 0
+
+for value in boyfriend['grades']:
+    total = total + value
+    length = length + 1
+
+print(boyfriend['name'], total / length)
