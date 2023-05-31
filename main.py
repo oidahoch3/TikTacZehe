@@ -1,13 +1,19 @@
-# Create a function called 'kiss' with two arguments, a 'name' and an 'amount'. done
-# Once called, it should print 'kiss name' n times for the amount that is given.
+size = 3
+grid = [' '] * size * size
 
 
-def kiss(name, amount):
-    n = 0
+def print_board():
+    for y in range(size):
+        if y > 0:
+            print('\n-----------')
 
-    while n < amount:
-        print('lex kiss', name)
-        n = n + 1
+        for x in range(size):
+            index = x + (y * size)
+            print('', grid[index], '|', end='')
 
 
-kiss('anna', 10)
+while True:
+    print_board()
+
+    index = int(input())
+    grid[index] = 'O'
