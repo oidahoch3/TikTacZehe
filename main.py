@@ -9,11 +9,14 @@ def print_board():
 
         for x in range(size):
             index = x + (y * size)
-            print('', grid[index], '|', end='')
+            print('', grid[index], '|' if x < size - 1 else '', end='')
 
 
 while True:
     print_board()
 
-    index = int(input())
-    grid[index] = 'O'
+    try:
+        index = int(input())
+        grid[index] = 'O'
+    except (ValueError, IndexError):
+        print('That is an invalid input, u stupid?')
